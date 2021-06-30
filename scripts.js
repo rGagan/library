@@ -1,5 +1,10 @@
 const container = document.querySelector(".container")
 const form = document.querySelector(".bookForm")
+const formAdd = document.querySelector(".add");
+const background = document.querySelector(".popupBack");
+
+form.style.display="none";
+background.style.display="none";
 
 String.prototype.capitalize = function () 
 {
@@ -8,7 +13,11 @@ String.prototype.capitalize = function ()
       .map((word) => word.charAt(0).toUpperCase() + word.substring(1))
       .join(' ');
 };
-  
+
+formAdd.addEventListener('click', ()=>{
+    form.style.display="block";
+    background.style.display="block";
+})
 
 form.addEventListener('submit', (e)=>{
     e.preventDefault();
@@ -34,8 +43,17 @@ form.addEventListener('submit', (e)=>{
     hRead.checked=true;
 
     addBookToLib(name, author, pages, read);
+    form.style.display="none";
+    background.style.display="none";
 })
 
+form.addEventListener('click', (e)=>{
+    if(e.target.className==="closeForm"){
+        e.preventDefault();
+        form.style.display="none";
+        background.style.display="none";
+    }
+})
 
 let myLib = [];
 
