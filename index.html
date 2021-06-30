@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+   <h1>Library</h1>
+
+   <div>
+        <button class="add"> Add</button>
+
+        <form class="bookForm">
+            <button class="closeForm">X</button>
+            <label>
+                Book
+                <input type="text" name="name" id="name">
+            </label>
+            <label>
+                Author
+                <input type="text" name="author" id="author">
+            </label>
+            <label>
+                Pages
+                <input type="number" name="pages" id="pages">
+            </label>
+            <label>
+                <input type="radio" name="read" value="true"> Read
+                <input type="radio" name="read" value="false"  id="unread" checked> Unread
+            </label>
+            
+            <input class="btn" type="submit" name="submit" value="Submit">
+          </form>
+          
+   </div>
+   <div class="container">
+
+   </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
