@@ -14,11 +14,13 @@ String.prototype.capitalize = function ()
       .join(' ');
 };
 
+// Popup the form when button is pressed
 formAdd.addEventListener('click', ()=>{
     form.style.display="block";
     background.style.display="block";
 })
 
+// taking the information input from the user
 form.addEventListener('submit', (e)=>{
     e.preventDefault();
     const hName = document.getElementById("name")
@@ -47,6 +49,7 @@ form.addEventListener('submit', (e)=>{
     background.style.display="none";
 })
 
+// Closing form when 'x' is pressed
 form.addEventListener('click', (e)=>{
     if(e.target.className==="closeForm"){
         e.preventDefault();
@@ -56,7 +59,7 @@ form.addEventListener('click', (e)=>{
 })
 
 let myLib = [];
-
+// Constructor for book item
 function Book(title, author, pages, read) 
 {
     this.title = title;
@@ -64,6 +67,8 @@ function Book(title, author, pages, read)
     this.pages = pages;
     this.read=read;
 }
+
+// removing all the books and displaying them each time a new book is added
 function display ()
 {
     while(container.firstChild)
@@ -126,6 +131,7 @@ Book.prototype.info = function()
     return msg;
 }
 
+// Initializer of Book object
 function addBookToLib(bk, auth, pg, read)
 {
    let book = new Book(bk, auth, pg, read);

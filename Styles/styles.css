@@ -1,5 +1,5 @@
 body{
-    background: url('lib.jpg') no-repeat center center fixed; 
+    background: url('/media/lib.jpg') no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -47,11 +47,11 @@ body{
   }
   
 .checked + .slider {
-    background-color: #2196F3;
+    background-color: #265732;
   }
   
   .checked + .slider {
-    box-shadow: 0 0 1px #2196F3;
+    box-shadow: 0 0 1px #056b1f;
   }
   
 .checked + .slider:before {
@@ -97,6 +97,7 @@ body{
     opacity: 1;
 }
 
+/* Disable background*/
 .popupBack{
     opacity:0.8;
     background-color:#ccc;
@@ -108,7 +109,7 @@ body{
     z-index:990;
 }
   
-
+/* Style for the input form*/
 .bookForm {
     background: linear-gradient(120deg, #6f889c 0%, #15172b 100%);
     border-radius: 20px;
@@ -169,9 +170,9 @@ body{
         text-align: center;
         width: 100%;
 }
-
+/* Style for each book*/
 .bookItem {
-    background: linear-gradient(120deg, #63eef8 0%, #5bda87 100%);
+    background: linear-gradient(120deg, #5fc3ca 0%, #032b11 100%);
     border-radius: 20px;
     box-sizing: border-box;
     display: float;
@@ -188,7 +189,7 @@ body{
     display: float;
     float:right;
     border: none;
-    background-color: #0ea2e7;
+    background-color: #068651;
     color: white;
     cursor: pointer;
     border-radius: 8px;
@@ -201,7 +202,7 @@ body{
 .title {
     display: block;
     text-align: center;
-    color: rgb(5, 83, 60);
+    color: rgb(198, 206, 204);
 }
 .author, .pages, .read {
     display: block;
